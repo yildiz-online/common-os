@@ -4,10 +4,10 @@ before_install:
   - wget https://bitbucket.org/yildiz-engine-team/build-application-binaries/downloads/openjdk_linux-x64.tar.gz
   - tar -xzf openjdk_linux-x64.tar.gz
   - wget https://bitbucket.org/yildiz-engine-team/build-application-binaries/downloads/apache-maven.zip
-  - unzip apache-maven.zip
-  - sudo chown 777 apache-maven/bin/mvn
-  - export JAVA_HOME=${PWD}/openjdk_linux-x64
-  - export PATH=${JAVA_HOME}/bin:$PATH
+  - unzip -qq apache-maven.zip
+  - export M2_HOME=$PWD/apache-maven
+  - export JAVA_HOME=$PWD/openjdk_linux-x64
+  - export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
 
 script:
   - apache-maven/bin/mvn -V -B -s settings.xml test
