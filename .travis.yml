@@ -10,6 +10,6 @@ before_install:
   - export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
 
 script:
-  - apache-maven/bin/mvn -V -B -s settings.xml test
+  - mvn -V -B -s settings.xml test
 install:
-  - apache-maven/bin/mvn -V -B -s settings.xml clean install
+  - mvn -V -B -s settings.xml clean install
