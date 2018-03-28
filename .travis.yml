@@ -1,6 +1,10 @@
 language: java
-jdk:
-  - oraclejdk9
+
+before_install:
+  - wget https://bitbucket.org/yildiz-engine-team/build-application-binaries/downloads/openjdk_linux-x64.tar.gz
+  - tar -xzf openjdk_linux-x64.tar.gz
+  - export JAVA_HOME=${PWD}/openjdk_linux-x64
+  - export PATH=${JAVA_HOME}/bin:$PATH
 
 script:
   - mvn -V -B -s settings.xml test
