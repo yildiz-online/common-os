@@ -5,6 +5,7 @@ before_install:
   - tar -xzf openjdk_linux-x64.tar.gz
   - wget https://bitbucket.org/yildiz-engine-team/build-application-binaries/downloads/apache-maven.zip
   - unzip apache-maven.zip
+  - chown 777 apache-maven/bin/mvn
   - export JAVA_HOME=${PWD}/openjdk_linux-x64
   - export PATH=${JAVA_HOME}/bin:$PATH
 
