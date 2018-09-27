@@ -1,8 +1,12 @@
+sudo: required
+
 language: java
-jdk:
-  - oraclejdk9
+
+services:
+  - docker
+
+before_install:
+  - docker pull moussavdb/build-java
 
 script:
-  - mvn -V -B -s settings.xml test
-install:
-  - mvn -V -B -s settings.xml clean install
+  - docker run -d moussavdb/build-java mvn -V s settings.xml clean install
