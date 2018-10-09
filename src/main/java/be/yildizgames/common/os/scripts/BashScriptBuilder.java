@@ -41,31 +41,31 @@ class BashScriptBuilder extends BaseScriptBuilder {
 
     @Override
     public ScriptBuilder renameInParentDir(String oldName, String newName) {
-        return null;
+        return this.renameInCurrentDir("../" + oldName, newName);
     }
 
     @Override
     public ScriptBuilder deleteInCurrentDir(String name) {
-        return null;
+        return this.addCommand("rm " + name);
     }
 
     @Override
     public ScriptBuilder deleteInParentDir(String name) {
-        return null;
+        return this.deleteInCurrentDir("../" + name);
     }
 
     @Override
     public ScriptBuilder start(String name) {
-        return null;
+        return this.addCommand("run " + name + ".sh");
     }
 
     @Override
     public ScriptBuilder startBin(String name) {
-        return null;
+        return this.addCommand("run " + name);
     }
 
     @Override
     public ScriptBuilder exit() {
-        return null;
+        return this.addCommand("exit 0");
     }
 }
