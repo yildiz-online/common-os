@@ -58,4 +58,8 @@ public class SystemWin64 implements OperatingSystem {
         return o instanceof SystemWin64;
     }
 
+    @Override
+    public String toString() {
+        return this.getName();
+    }
 }

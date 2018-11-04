@@ -58,5 +58,8 @@ public class SystemLinux64 implements OperatingSystem {
         return o instanceof SystemLinux64;
     }
 
-
+    @Override
+    public String toString() {
+        return this.getName();
+    }
 }
