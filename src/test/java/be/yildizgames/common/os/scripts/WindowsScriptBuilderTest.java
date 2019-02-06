@@ -30,75 +30,75 @@ import org.junit.jupiter.api.Test;
 public class WindowsScriptBuilderTest {
 
     @Nested
-    class DeleteInCurrentDir {
+    public class DeleteInCurrentDir {
 
         @Test
-        void happyFlow() {
+        public void happyFlow() {
             WindowsScriptBuilder builder = new WindowsScriptBuilder();
             builder.deleteInCurrentDir("azerty");
             Assertions.assertEquals("del \"%~dp0azerty\"\r\n", builder.generate());
         }
 
         @Test
-        void withNull() {
+        public void withNull() {
             //TODO implements
         }
     }
 
     @Nested
-    class DeleteInParentDir {
+    public class DeleteInParentDir {
 
         @Test
-        void happyFlow() {
+        public void happyFlow() {
             WindowsScriptBuilder builder = new WindowsScriptBuilder();
             builder.deleteInParentDir("azerty");
             Assertions.assertEquals("del \"%~dp0..\\azerty\"\r\n", builder.generate());
         }
 
         @Test
-        void withNull() {
+        public void withNull() {
             //TODO implements
         }
     }
 
     @Nested
-    class RenameInCurrentDir {
+    public class RenameInCurrentDir {
 
         @Test
-        void happyFlow() {
+        public void happyFlow() {
             WindowsScriptBuilder builder = new WindowsScriptBuilder();
             builder.renameInCurrentDir("azerty", "ytreza");
             Assertions.assertEquals("rename \"%~dp0azerty\" \"ytreza\"\r\n", builder.generate());
         }
 
         @Test
-        void withNull() {
+        public void withNull() {
             //TODO implements
         }
 
         @Test
-        void withNullParam2() {
+        public void withNullParam2() {
             //TODO implements
         }
     }
 
     @Nested
-    class RenameInParentDir {
+    public class RenameInParentDir {
 
         @Test
-        void happyFlow() {
+        public void happyFlow() {
             WindowsScriptBuilder builder = new WindowsScriptBuilder();
             builder.renameInParentDir("azerty", "ytreza");
             Assertions.assertEquals("rename \"%~dp0..\\azerty\" \"ytreza\"\r\n", builder.generate());
         }
 
         @Test
-        void withNull() {
+        public void withNull() {
             //TODO implements
         }
 
         @Test
-        void withNullParam2() {
+        public void withNullParam2() {
             //TODO implements
         }
     }
