@@ -26,6 +26,7 @@ package be.yildizgames.common.os;
 
 /**
  * This class expose functions specific for operating systems.
+ *
  * @author Grégory Van den Borre
  */
 public class SystemUtil {

@@ -25,6 +25,9 @@ package be.yildizgames.common.os.scripts;
 
 import java.io.IOException;
 
+/**
+ * @author Grégory Van den Borre
+ */
 public interface ScriptRunner {
 
     void run(String script, String... args) throws IOException;

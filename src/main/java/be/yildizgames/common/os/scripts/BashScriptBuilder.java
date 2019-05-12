@@ -23,6 +23,9 @@
  */
 package be.yildizgames.common.os.scripts;
 
+/**
+ * @author Grégory Van den Borre
+ */
 class BashScriptBuilder extends BaseScriptBuilder {
 
     protected BashScriptBuilder() {

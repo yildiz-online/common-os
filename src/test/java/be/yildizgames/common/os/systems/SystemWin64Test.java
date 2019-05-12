@@ -54,4 +54,5 @@ public class SystemWin64Test {
             assertFalse(new SystemWin64().isCurrent());
         }
     }
+
 }

@@ -48,7 +48,6 @@ public class SystemUtilTest {
                 Assertions.fail("Unknown system:" + System.getProperty("os.name"));
             }
         }
-
     }
 
 }

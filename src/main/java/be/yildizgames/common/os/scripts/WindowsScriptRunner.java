@@ -25,6 +25,9 @@ package be.yildizgames.common.os.scripts;
 
 import java.io.IOException;
 
+/**
+ * @author Grégory Van den Borre
+ */
 class WindowsScriptRunner implements ScriptRunner {
 
     WindowsScriptRunner() {
@@ -34,5 +37,4 @@ class WindowsScriptRunner implements ScriptRunner {
     public void run(String script, String... args) throws IOException {
         Runtime.getRuntime().exec("cmd /c start " + script + ".bat", args);
     }
-
 }

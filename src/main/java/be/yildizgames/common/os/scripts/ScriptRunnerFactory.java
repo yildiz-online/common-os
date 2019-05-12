@@ -26,6 +26,9 @@ package be.yildizgames.common.os.scripts;
 import be.yildizgames.common.os.OperatingSystem;
 import be.yildizgames.common.os.factory.OperatingSystems;
 
+/**
+ * @author Grégory Van den Borre
+ */
 public class ScriptRunnerFactory {
 
     public static ScriptRunner runnerFor(OperatingSystem o) {
