@@ -62,4 +62,5 @@ public class SystemWin64 implements OperatingSystem {
     public String toString() {
         return this.getName();
     }
+
 }

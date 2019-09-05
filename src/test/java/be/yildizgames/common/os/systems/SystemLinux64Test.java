@@ -34,26 +34,25 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * @author Grégory Van den Borre
  */
-class SystemLinux64Test {
+public class SystemLinux64Test {
 
     @Test
-    void getNameTest() {
+    public void getNameTest() {
         assertEquals("linux64", new SystemLinux64().getName());
     }
 
     @Test
-    void getExtensionTest() {
+    public void getExtensionTest() {
         assertEquals(".so", new SystemLinux64().getExtension());
     }
 
     @Test
-    void isCurrentTest() {
+    public void isCurrentTest() {
         if(SystemUtil.isLinux()) {
             assertTrue(new SystemLinux64().isCurrent());
         } else {
             assertFalse(new SystemLinux64().isCurrent());
         }
     }
-
 
 }

@@ -31,6 +31,9 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Grégory Van den Borre
+ */
 abstract class BaseScriptBuilder implements ScriptBuilder {
 
     private static final String QUOTE = "\"";

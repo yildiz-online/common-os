@@ -34,13 +34,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * @author Grégory Van den Borre
  */
-class OperatingSystemsTest {
+public class OperatingSystemsTest {
 
     @Nested
-    class GetCurrent {
+    public class GetCurrent {
 
         @Test
-        void happyFlow() {
+        public void happyFlow() {
             if(OperatingSystems.LINUX64.getSystem().isCurrent()) {
                 assertEquals(OperatingSystems.LINUX64.getSystem(), OperatingSystems.getCurrent());
             } else if (OperatingSystems.WIN64.getSystem().isCurrent()) {
@@ -52,10 +52,10 @@ class OperatingSystemsTest {
     }
 
     @Nested
-    class GetAll {
+    public class GetAll {
 
         @Test
-        void happyFlow() {
+        public void happyFlow() {
             assertEquals(2, OperatingSystems.getAll().length);
             assertEquals(OperatingSystems.WIN64.getSystem(), OperatingSystems.getAll()[0]);
             assertEquals(OperatingSystems.LINUX64.getSystem(), OperatingSystems.getAll()[1]);
@@ -63,23 +63,22 @@ class OperatingSystemsTest {
     }
 
     @Nested
-    class Win64 {
+    public class Win64 {
 
         @Test
-        void happyFlow() {
+        public void happyFlow() {
             assertEquals(new SystemWin64(), OperatingSystems.WIN64.getSystem());
         }
 
     }
 
     @Nested
-    class Linux64 {
+    public class Linux64 {
 
         @Test
-        void happyFlow() {
+        public void happyFlow() {
             assertEquals(new SystemLinux64(), OperatingSystems.LINUX64.getSystem());
         }
 
     }
-
 }

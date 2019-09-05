@@ -23,6 +23,9 @@
  */
 package be.yildizgames.common.os.scripts;
 
+/**
+ * @author Grégory Van den Borre
+ */
 class WindowsScriptBuilder extends BaseScriptBuilder {
 
     private static final String CURRENT_DIR = "%~dp0";

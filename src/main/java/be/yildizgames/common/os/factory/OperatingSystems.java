@@ -76,4 +76,5 @@ public enum OperatingSystems {
                 .map(OperatingSystems::getSystem)
                 .toArray(OperatingSystem[]::new);
     }
+
 }

@@ -34,24 +34,25 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * @author Grégory Van den Borre
  */
-class SystemWin64Test {
+public class SystemWin64Test {
 
     @Test
-    void getNameTest() {
+    public void getNameTest() {
         assertEquals("win64", new SystemWin64().getName());
     }
 
     @Test
-    void getExtensionTest() {
+    public void getExtensionTest() {
         assertEquals(".dll", new SystemWin64().getExtension());
     }
 
     @Test
-    void isCurrentTest() {
+    public void isCurrentTest() {
         if(SystemUtil.isWindows()) {
             assertTrue(new SystemWin64().isCurrent());
         } else {
             assertFalse(new SystemWin64().isCurrent());
         }
     }
+
 }

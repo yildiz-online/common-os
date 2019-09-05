@@ -34,4 +34,5 @@ public interface OperatingSystem {
     String getName();
 
     boolean isCurrent();
+
 }
