@@ -26,6 +26,7 @@ package be.yildizgames.common.os.factory;
 
 import be.yildizgames.common.os.OperatingSystem;
 import be.yildizgames.common.os.systems.SystemLinux64;
+import be.yildizgames.common.os.systems.SystemLinuxArm64;
 import be.yildizgames.common.os.systems.SystemWin64;
 
 import java.util.Arrays;
@@ -45,7 +46,9 @@ public enum OperatingSystems {
     /**
      * Linux 64 bits.
      */
-    LINUX64(new SystemLinux64());
+    LINUX64(new SystemLinux64()),
+
+    LINUXARM64(new SystemLinuxArm64());
 
     /**
      * Associated system.

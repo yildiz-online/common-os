@@ -45,7 +45,7 @@ public class SystemWin64 implements OperatingSystem {
 
     @Override
     public boolean isCurrent() {
-        return !SystemUtil.isLinux();
+        return SystemUtil.isWindows() && SystemUtil.isAmd64();
     }
 
     @Override
