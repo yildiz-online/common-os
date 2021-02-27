@@ -45,4 +45,15 @@ public class SystemUtil {
     public static boolean isWindows() {
         return System.getProperty("os.name").toLowerCase().contains("win");
     }
+
+    public static boolean isArm64() {
+        var arch = System.getProperty("os.arch");
+        var isARM = arch.startsWith("arm") || arch.startsWith("aarch64");
+        var is64Bit = arch.contains("64") || arch.startsWith("armv8");
+        return is64Bit && isARM;
+    }
+
+    public static boolean isAmd64() {
+        return "amd64".equals(System.getProperty("os.arch"));
+    }
 }

@@ -45,7 +45,7 @@ public class SystemLinux64 implements OperatingSystem {
 
     @Override
     public boolean isCurrent() {
-        return SystemUtil.isLinux();
+        return SystemUtil.isLinux() && SystemUtil.isAmd64();
     }
 
     @Override
