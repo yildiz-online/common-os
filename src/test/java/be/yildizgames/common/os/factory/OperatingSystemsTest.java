@@ -56,9 +56,10 @@ public class OperatingSystemsTest {
 
         @Test
         public void happyFlow() {
-            assertEquals(2, OperatingSystems.getAll().length);
+            assertEquals(3, OperatingSystems.getAll().length);
             assertEquals(OperatingSystems.WIN64.getSystem(), OperatingSystems.getAll()[0]);
             assertEquals(OperatingSystems.LINUX64.getSystem(), OperatingSystems.getAll()[1]);
+            assertEquals(OperatingSystems.LINUXARM64.getSystem(), OperatingSystems.getAll()[2]);
         }
     }
 
