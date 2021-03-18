@@ -29,7 +29,7 @@
   <url>https://github.com/yildiz-online/common-os</url>
 
   <artifactId>common-os</artifactId>
-  <version>1.2.1-SNAPSHOT</version>
+  <version>1.2.0</version>
 
   <packaging>jar</packaging>
   <inceptionYear>2017</inceptionYear>
