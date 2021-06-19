@@ -28,32 +28,32 @@ public class SystemLinuxArm64 implements OperatingSystem {
     }
 
     @Override
-    public String getExtension() {
+    public final String getExtension() {
         return ".so";
     }
 
     @Override
-    public String getName() {
+    public final String getName() {
         return "linuxarm64";
     }
 
     @Override
-    public boolean isCurrent() {
+    public final boolean isCurrent() {
         return this.current;
     }
 
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         return getName().hashCode() + getExtension().hashCode();
     }
 
     @Override
-    public boolean equals(Object o) {
+    public final boolean equals(Object o) {
         return o instanceof SystemLinuxArm64;
     }
 
     @Override
-    public String toString() {
+    public final String toString() {
         return this.getName();
     }
 }
