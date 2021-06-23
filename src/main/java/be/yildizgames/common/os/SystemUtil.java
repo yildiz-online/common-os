@@ -48,9 +48,20 @@ public class SystemUtil {
 
     public static boolean isArm64() {
         var arch = System.getProperty("os.arch");
-        var isARM = arch.startsWith("arm") || arch.startsWith("aarch64");
-        var is64Bit = arch.contains("64") || arch.startsWith("armv8");
-        return is64Bit && isARM;
+        return is64bit(arch) && isArm(arch);
+    }
+
+    public static boolean isArm32() {
+        var arch = System.getProperty("os.arch");
+        return !is64bit(arch) && isArm(arch);
+    }
+
+    private static boolean isArm(String arch) {
+        return arch.startsWith("arm") || arch.startsWith("aarch64");
+    }
+
+    private static boolean is64bit(String arch) {
+        return arch.contains("64") || arch.startsWith("armv8");
     }
 
     public static boolean isAmd64() {

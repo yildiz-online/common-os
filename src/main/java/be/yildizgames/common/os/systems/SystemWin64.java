@@ -34,32 +34,32 @@ import be.yildizgames.common.os.SystemUtil;
 public class SystemWin64 implements OperatingSystem {
 
     @Override
-    public String getExtension() {
+    public final String getExtension() {
         return ".dll";
     }
 
     @Override
-    public String getName() {
+    public final String getName() {
         return "win64";
     }
 
     @Override
-    public boolean isCurrent() {
+    public final boolean isCurrent() {
         return SystemUtil.isWindows() && SystemUtil.isAmd64();
     }
 
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         return getName().hashCode() + getExtension().hashCode();
     }
 
     @Override
-    public boolean equals(Object o) {
+    public final boolean equals(Object o) {
         return o instanceof SystemWin64;
     }
 
     @Override
-    public String toString() {
+    public final String toString() {
         return this.getName();
     }
 

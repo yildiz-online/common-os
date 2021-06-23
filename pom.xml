@@ -29,7 +29,7 @@
   <url>https://github.com/yildiz-online/common-os</url>
 
   <artifactId>common-os</artifactId>
-  <version>1.2.0</version>
+  <version>1.2.1</version>
 
   <packaging>jar</packaging>
   <inceptionYear>2017</inceptionYear>
@@ -42,7 +42,7 @@
   <parent>
     <groupId>be.yildiz-games</groupId>
     <artifactId>parent</artifactId>
-    <version>4.0.0</version>
+    <version>4.0.2</version>
   </parent>
 
   <properties>

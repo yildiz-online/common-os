@@ -18,13 +18,13 @@ import be.yildizgames.common.os.SystemUtil;
 /**
  * @author Grégory Van den Borre
  */
-public class SystemLinuxArm64 implements OperatingSystem {
+public class SystemLinuxArm32 implements OperatingSystem {
 
     private final boolean current;
 
-    public SystemLinuxArm64() {
+    public SystemLinuxArm32() {
         super();
-        this.current = SystemUtil.isLinux() && SystemUtil.isArm64();
+        this.current = SystemUtil.isLinux() && SystemUtil.isArm32();
     }
 
     @Override
@@ -34,7 +34,7 @@ public class SystemLinuxArm64 implements OperatingSystem {
 
     @Override
     public final String getName() {
-        return "linuxarm64";
+        return "linuxarm32";
     }
 
     @Override
@@ -49,7 +49,7 @@ public class SystemLinuxArm64 implements OperatingSystem {
 
     @Override
     public final boolean equals(Object o) {
-        return o instanceof SystemLinuxArm64;
+        return o instanceof SystemLinuxArm32;
     }
 
     @Override
