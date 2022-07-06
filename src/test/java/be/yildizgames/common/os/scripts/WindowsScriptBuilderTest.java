@@ -30,78 +30,78 @@ import org.junit.jupiter.api.Test;
 /**
  * @author Grégory Van den Borre
  */
-public class WindowsScriptBuilderTest {
+class WindowsScriptBuilderTest {
 
     @Nested
-    public class DeleteInCurrentDir {
+    class DeleteInCurrentDir {
 
         @Test
-        public void happyFlow() {
+        void happyFlow() {
             WindowsScriptBuilder builder = new WindowsScriptBuilder();
             builder.deleteInCurrentDir("azerty");
             Assertions.assertEquals("del \"%~dp0azerty\"\r\n", builder.generate());
         }
 
         @Test
-        public void withNull() {
+        void withNull() {
             //TODO implements
         }
     }
 
     @Nested
-    public class DeleteInParentDir {
+    class DeleteInParentDir {
 
         @Test
-        public void happyFlow() {
+        void happyFlow() {
             WindowsScriptBuilder builder = new WindowsScriptBuilder();
             builder.deleteInParentDir("azerty");
             Assertions.assertEquals("del \"%~dp0..\\azerty\"\r\n", builder.generate());
         }
 
         @Test
-        public void withNull() {
+        void withNull() {
             //TODO implements
         }
     }
 
     @Nested
-    public class RenameInCurrentDir {
+    class RenameInCurrentDir {
 
         @Test
-        public void happyFlow() {
+        void happyFlow() {
             WindowsScriptBuilder builder = new WindowsScriptBuilder();
             builder.renameInCurrentDir("azerty", "ytreza");
             Assertions.assertEquals("rename \"%~dp0azerty\" \"ytreza\"\r\n", builder.generate());
         }
 
         @Test
-        public void withNull() {
+        void withNull() {
             //TODO implements
         }
 
         @Test
-        public void withNullParam2() {
+        void withNullParam2() {
             //TODO implements
         }
     }
 
     @Nested
-    public class RenameInParentDir {
+    class RenameInParentDir {
 
         @Test
-        public void happyFlow() {
+        void happyFlow() {
             WindowsScriptBuilder builder = new WindowsScriptBuilder();
             builder.renameInParentDir("azerty", "ytreza");
             Assertions.assertEquals("rename \"%~dp0..\\azerty\" \"ytreza\"\r\n", builder.generate());
         }
 
         @Test
-        public void withNull() {
+        void withNull() {
             //TODO implements
         }
 
         @Test
-        public void withNullParam2() {
+        void withNullParam2() {
             //TODO implements
         }
     }

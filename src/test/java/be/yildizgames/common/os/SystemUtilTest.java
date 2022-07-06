@@ -31,14 +31,14 @@ import org.junit.jupiter.api.Test;
 /**
  * @author Grégory Van den Borre
  */
-public class SystemUtilTest {
+class SystemUtilTest {
 
     @Nested
-    public class IsOS {
+    class IsOS {
 
         @Test
-        public void happyFlow() {
-            if(System.getProperty("os.name").toLowerCase().contains("linux")) {
+        void happyFlow() {
+            if (System.getProperty("os.name").toLowerCase().contains("linux")) {
                 Assertions.assertTrue(SystemUtil.isLinux());
                 Assertions.assertFalse(SystemUtil.isWindows());
             } else if (System.getProperty("os.name").toLowerCase().contains("win")) {

@@ -22,7 +22,7 @@
  *
  */
 
-module be.yildizgames.common.os {
+open module be.yildizgames.common.os {
 
     exports be.yildizgames.common.os;
     exports be.yildizgames.common.os.factory;
